@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+<body>
+    <h2>What is 2 + 2</h2>
+
+    <button onclick="checkanswer(4)">4</button>
+    <button onclick="checkanswer(5)">5</button>
+    <button ondblclick="checkanswer(6)">6</button>
+
+    <p id="result"></p>
+
+ 
+    <script>
+        function checkanswer(Answer) {
+
+            const result = document.getElementById("result")
+            if(Answer == 4) {
+            result.textContent = "Correct";
+            result.style.color = "Green";
+        } else {
+            result.textContent = "Wrong, try again";
+            result.style.color = "Red";
+        }
+    }
+    </script>
+</body>
+</html>

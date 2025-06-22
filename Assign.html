@@ -1,0 +1,125 @@
+//question 1 
+<!-- The Document Object Model (DOM) is a programming interface for web documents. -->
+ <!-- It represents the page so that programs can change the document structure, style, and content. -->
+  <!-- The DOM represents the document as nodes and objects; that way, programming languages can interact with the page. -->
+
+<!-- //question 2 -->
+<!-- Syntax: let element = document. getElementById("myElement"); -->
+ <!-- To demonstrate selecting an HTML element by ID in JavaScript -->
+  <!-- and then using it for updating the state of another HTML element -->
+  
+  <!-- //question 3 -->
+  <!-- Text content can be known as the value in an element tag. -->
+  <!-- while inner html is the classname in an element tag -->
+
+  <!-- //question 4 -->
+  <!-- By declaring a variable then call the id name or class name, call the property "textContent" insert the new outcome  -->
+  <!-- you wantwith a batic sign and a dollar sign then put the variable name inside an object bracket. -->
+
+  <!-- //question 5 -->
+  <!-- event.preventDefault() helps to reload an input after inputing a detailor value automatically -->
+  <!-- or if can also be said to refresh an input after inserting a value. -->
+
+  <!-- //question 6 -->
+  <!-- by calling the id or class name either by (.) or (#) -->
+
+  <!-- //question 7 -->
+  <!-- querySelector identifies a particular element while querySelectorAll selects -->
+
+
+  <!-- //question 8 -->
+
+
+  <!-- //question 9 -->
+  <!-- by declaring a new variable then calling the element name  -->
+  <!-- call the element name and indicate(.) style(.) whatever you want to style either color or fontsize. -->
+
+  <!-- //question 10
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" id="myform">
+    <input type="text" id="username" placeholder="Enter your name" />
+
+    <button type="submit">Submit</button>
+
+    <p id="output"></p>
+  </form>
+
+  <button id="toggleButton">Click Me</button>
+
+  <button id='modalButton'>Modal</button>
+  <button id='modalOverlay'>Overlay</button>
+
+
+
+  <script>
+    const form = document.getElementById("myform");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+  const name = document.getElementById("username").value; 
+  document.getElementById("output").textContent = `Kode10X, ${name}!`;
+});
+
+
+const button = document.getElementById('toggleButton');
+
+button.addEventListener('dblclick', function() {
+  this.classList.toggle('toggled');
+});
+
+
+const butto = document.getElementById('toggleButton');
+butto.addEventListener('dblclick', function() {
+  this.style.backgroundColor = 
+    this.style.backgroundColor = "red";
+});
+</script>
+
+<script>
+  const modalButton = document.getElementById('modalButton');
+const modalOverlay = document.getElementById('modalOverlay');
+const closeButton = document.querySelector('.close-button');
+
+// Open modal
+modalButton.addEventListener('click', () {
+  modalOverlay.style.display = 'flex';
+});
+
+// Close modal with close button
+closeButton.addEventListener('click', ()  {
+  modalOverlay.style.display = 'none';
+});
+
+// Close modal when clicking outside content
+modalOverlay.addEventListener('click', (e) {
+  if (e.target === modalOverlay) {
+    modalOverlay.style.display = 'none';
+  }
+});
+
+// Optional: Close with Escape key
+document.addEventListener('keydown', (e)  {
+  if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+    modalOverlay.style.display = 'none';
+  }
+});
+</script>
+
+<script>
+  
+</script>
+
+
+</script>
+</body>
+</html>
+
+  

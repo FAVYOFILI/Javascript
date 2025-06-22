@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="main-title">Hello World</h1>
+    <p class="content">This is a paragraph</p>
+    <p class="content">This is another paragraph</p>
+    <button id="click">Click Me!</button>
+    <p id="output">You haven't clicked me</p>
+
+    <script>
+        //Selecting by Id
+        const title = document.getElementById("main-title");
+        title.textContent = "Welcome to DOM Manipulation";
+        title.style.color = "red";
+        title.style.fontSize = "62px";
+
+        //Selecting by class name
+        const paragraph = document.getElementsByClassName("content");
+        paragraph[1].textContent = "DOM is a programming interface for web documentation.";
+
+        //Button
+        const button = document.getElementById("click");
+        const output = document.getElementById("output");
+        button.addEventListener("dblclick", function() {
+            output.textContent = "You clicked Me";
+            output.style.color ="violet";
+        })
+
+    </script>
+</body>
+</html>
